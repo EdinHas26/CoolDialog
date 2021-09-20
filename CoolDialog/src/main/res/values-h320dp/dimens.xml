@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="standard_layout_margin">20dp</dimen>
+    <dimen name="help_dialog_size">80dp</dimen>
+    <dimen name="help_item_top_margin">40dp</dimen>
+    <dimen name="button_height">52dp</dimen>
+
+    <dimen name="headline_h3">30sp</dimen>
+    <dimen name="headline_h4">22sp</dimen>
+    <dimen name="headline_h5">16sp</dimen>
+    <dimen name="headline_h6">14sp</dimen>
+    <dimen name="subtitle1">12sp</dimen>
+    <dimen name="subtitle2">11sp</dimen>
+    <dimen name="body1">12sp</dimen>
+    <dimen name="body2">12sp</dimen>
+    <dimen name="button_text">12sp</dimen>
+    <dimen name="caption">11sp</dimen>
+
+</resources>
