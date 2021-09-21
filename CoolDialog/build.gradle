@@ -12,7 +12,6 @@ afterEvaluate {
         publications {
 
             release(MavenPublication) {
-
                 from components.release
                 groupId = 'com.github.EdinHas26'
                 artifactId = 'final'
