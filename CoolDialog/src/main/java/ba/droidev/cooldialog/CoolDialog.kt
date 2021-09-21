@@ -11,10 +11,7 @@ import android.widget.LinearLayout
 import android.widget.RelativeLayout
 import android.widget.TextView
 import androidx.cardview.widget.CardView
-import androidx.core.view.marginTop
 import com.bumptech.glide.Glide
-import com.bumptech.glide.load.engine.DiskCacheStrategy
-import com.bumptech.glide.request.RequestOptions
 import com.google.android.material.button.MaterialButton
 import de.hdodenhof.circleimageview.CircleImageView
 import java.lang.Exception

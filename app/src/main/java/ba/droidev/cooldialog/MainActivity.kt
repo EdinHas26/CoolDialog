@@ -2,7 +2,6 @@ package ba.droidev.cooldialog
 
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
-import android.graphics.drawable.Drawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -10,7 +9,6 @@ import android.view.Window
 import android.widget.AbsListView
 import android.widget.TextView
 import android.widget.Toast
-import androidx.core.graphics.drawable.DrawableCompat
 import com.google.android.material.button.MaterialButton
 
 class MainActivity : AppCompatActivity() {
