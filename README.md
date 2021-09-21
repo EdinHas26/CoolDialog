@@ -53,7 +53,7 @@ In order for CoolDialog to work setting Material Theme to app is necessary. To s
 ```
 These are required prerequisites to implement CoolDialog library. Just change "latest_version" with current library release (Example: v1.0.4-a1)
 
-### Create Dialog Instance
+#### iii. Create Dialog Instance
 
 To create new instance of `CoolDialog` just call `CoolDialog` constructor like this.
 ```kotlin
