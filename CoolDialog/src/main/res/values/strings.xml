@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="btn_cancel">Odustani</string>
-    <string name="make_call">Pozovi</string>
+    <string name="btn_cancel">Cancel</string>
+    <string name="make_call">Call</string>
+    <string name="username">John Smith</string>
+    <string name="email">john.smith@droidev.com</string>
+    <string name="phone">812-913-7224</string>
+    <string name="description">Landline, New Albany, IN, USA</string>
 
 </resources>
