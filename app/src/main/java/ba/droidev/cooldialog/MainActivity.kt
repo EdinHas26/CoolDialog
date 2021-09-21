@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
             dialog.setCancelButtonOnClickListener(View.OnClickListener { dialog.dismiss() })
             dialog.setCallButtonOnClickListener(View.OnClickListener { Toast.makeText(baseContext, "CALL BUTTON CLICKED", Toast.LENGTH_LONG).show() })
             dialog.setTextToAll("Annie Fox", "annie.fox@droidev.com", "812-913-7452", "New Jersey, NY, USA")
-            dialog.setImageResource(R.drawable.profile_picture)
+            dialog.setImageResource("https://torange.biz/photofxnew/76/HD/lion-profile-picture-76801.jpg")
             dialog.setImageSize(170)
 
             val textView: TextView = dialog.getFirstTextView()
