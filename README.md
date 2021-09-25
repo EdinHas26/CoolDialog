@@ -121,7 +121,7 @@ This will change text on all four of the TextViews.
 coolDialog.setTextToAll("ANNIE FOX", "annie.fox@droidev.com", "812-913-7452", "New Jersey, NY, USA")
 ```
 
-###### b. Show/Hide TextViews
+##### b. Show/Hide TextViews
 If you want to hide/show only few of the four TextViews you can do it with these methods:
 
 - `coolDialog.hideFirstTextVieW()`
@@ -151,7 +151,7 @@ coolDialog.setTextViewVisibility(View.VISIBLE, 1)
 
 Again you can send more than one position at time but there must be minimum of one position to set the visibility.
 
-###### c. Set color for the TextViews
+##### c. Set color for the TextViews
 If you want to change the color of the text you can do it like this:
 ```kotlin
 coolDialog.setDialogTextColor("#000000")
@@ -161,14 +161,14 @@ Text color can be changed by sending hex color code as String or sending color i
 
 #### iii. MaterialButton
 There are two buttons inside CoolDialog named CallButton and CancelButton. Methods on buttons are simple and easy to implement. 
-###### a. Set text on buttons
+##### a. Set text on buttons
 In order to change text on CallButton or CancelButton you can call these methods:
 ```kotlin
 coolDialog.setCallButtonText("call")
 coolDialog.setCancelButtonText("cancel")
 ```
 
-###### b. Hide/Show buttons
+##### b. Hide/Show buttons
 If you want to show/hide buttons you can just call:
 ```kotlin
 coolDialog.showCallButton()
@@ -180,7 +180,7 @@ coolDialog.showCancelButton()
 coolDialog.hideCancelButton()
 ```
 
-###### c. Change button and button text color
+##### c. Change button and button text color
 To change the text color of the call button just use this:
 ```kotlin
 coolDialog.setCallButtonTextColor(R.color.colorPrimary)
@@ -193,7 +193,7 @@ coolDialog.setCancelButtonColor(R.color.colorAccent) // or you can use hex color
 ```
 Button text color can be changed by sending hex color code as String or sending color id.
 
-###### d. Set icon and icon color for CallButton
+##### d. Set icon and icon color for CallButton
 Call button has icon which can be changed. You can simply use these methods to change the icon or change its color. To change icon resource:
 ```kotlin
 coolDialog.setCallButtonIconResource(drawable: Drawable)
@@ -204,7 +204,7 @@ As you can see there are two ways to change the icon resource. One is to send dr
 coolDialog.setCallButtonIconColor(R.color.colorPrimary)
 ```
 
-###### e. Set onClickListener on buttons
+##### e. Set onClickListener on buttons
 To create click listener on buttons you can simply use this:
 ```kotlin
 coolDialog.setCancelButtonOnClickListener(listener)
@@ -213,7 +213,7 @@ coolDialog.setCallButtonOnClickListener(listener)
 
 #### iv. CircleImageView
 CoolDialog impelements CircleImageView library so you can show modern-like profile images. 
-###### a. Change image resource
+##### a. Change image resource
 To change your resource image inside CircleImageView from drawable folder you can use this:
 ```kotlin
 coolDialog.setImageResource(R.drawable.profile_picture)
@@ -227,13 +227,13 @@ The latter loads image from the Internet using Glide library, so to use this you
 <uses-permission android:name="android.permission.INTERNET" />
 ```
 
-###### b. Set image size
+##### b. Set image size
 To change image size you can use `.setImageSize(size: Int)` method. This method will change not only the image size but reorder TextViews and everything else so there is no overlapping between views. There is calculation done on screen dimensions in the background when CoolDialog is first initialized but sometimes this doesn't work. In order to change that you can simply experiment with image size to get what you like.
 ```kotlin
 coolDialog.setImageSize(150)
 ```
 
-###### c. Change image stroke color
+##### c. Change image stroke color
 CircleImageView has stroke color around its view and you can also change this. By default this color matches with CancelButton color but it doesn't have to be like that. To change this color you can simply use this:
 ```kotlin
 coolDialog.setImageStrokeColor("#000000")
