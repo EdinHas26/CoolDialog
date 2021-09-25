@@ -52,7 +52,7 @@ In order for CoolDialog to work setting Material Theme to app is necessary. To s
     </style>
 </resources>
 ```
-These are required prerequisites to implement CoolDialog library. Just change "latest_version" with current library release (Example: v1.0.4-a1)
+These are required prerequisites to implement CoolDialog library.
 
 ### Create Dialog Instance
 
