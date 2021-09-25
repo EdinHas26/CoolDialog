@@ -92,7 +92,7 @@ coolDialog.requestContentView()
 ```
 
 #### ii. Get views from dialog_layout.xml
-In order to let you customize the layout to your needs there is option to get layout views and call view methods as you wish. In order to do this you have these functions at your service:
+In order to let you customize the layout to your needs there is option to get layout views and call view methods as you wish. To do this you have these functions at your service:
 
 - `.getFirstTextView()` - retrieves TextView
 - `.getSecondTextView()` - retrieves TextView
