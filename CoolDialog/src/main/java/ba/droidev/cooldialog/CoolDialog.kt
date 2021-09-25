@@ -11,12 +11,31 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.RelativeLayout
 import android.widget.TextView
+import androidx.annotation.Nullable
 import androidx.cardview.widget.CardView
 import androidx.core.content.ContextCompat
 import com.bumptech.glide.Glide
 import com.google.android.material.button.MaterialButton
 import de.hdodenhof.circleimageview.CircleImageView
 import java.lang.Exception
+import java.lang.IllegalArgumentException
+import java.lang.IndexOutOfBoundsException
+
+/**
+ * Copyright [2021] [Edin Hasanović: https://github.com/EdinHas26]
+
+ * Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+ * http://www.apache.org/licenses/LICENSE-2.0
+
+ * Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+ */
 
 class CoolDialog(context: Context): Dialog(context) {
 
@@ -57,32 +76,6 @@ class CoolDialog(context: Context): Dialog(context) {
         return this.findViewById(R.id.btn_cancel)
     }
 
-    /*********************
-    *** IMAGE RESOURCE ***
-    *********************/
-
-    /** <! Set image by drawable ID */
-    fun setImageResource(id: Int) {
-        try {
-            this.findViewById<ImageView>(R.id.iv_circle_image).setImageResource(id)
-        } catch (e: Exception) {
-            e.printStackTrace()
-        }
-    }
-    /** <! Set image by URL using Glide library (NEEDS INTERNET CONNECTION!) */
-    fun setImageResource(url: String) {
-        try {
-            val circleImageView: CircleImageView = this.findViewById(R.id.iv_circle_image)
-            Glide.with(context)
-                .load(
-                    url
-                )
-                .into(this.findViewById(R.id.iv_circle_image))
-        } catch (e: Exception) {
-            e.printStackTrace()
-        }
-    }
-
     /*************************
     *** TEXTVIEW FUNCTIONS ***
     *************************/
@@ -120,6 +113,43 @@ class CoolDialog(context: Context): Dialog(context) {
     fun hideFourthTextView() {
         this.findViewById<TextView>(R.id.tv_text4).visibility = View.GONE
     }
+    /** <! Hide TextView based on position */
+    fun hideTextView(p1: Int, p2: Int = -1, p3: Int = -1, p4: Int = -1) {
+        when(p1) {
+            0 -> this.findViewById<TextView>(R.id.tv_text1).visibility = View.GONE
+            1 -> this.findViewById<TextView>(R.id.tv_text2).visibility = View.GONE
+            2 -> this.findViewById<TextView>(R.id.tv_text3).visibility = View.GONE
+            3 -> this.findViewById<TextView>(R.id.tv_text4).visibility = View.GONE
+            else -> throw IndexOutOfBoundsException("Argument must be from 0 to 3")
+        }
+        if (p2 >= 0) {
+            when(p2) {
+                0 -> this.findViewById<TextView>(R.id.tv_text1).visibility = View.GONE
+                1 -> this.findViewById<TextView>(R.id.tv_text2).visibility = View.GONE
+                2 -> this.findViewById<TextView>(R.id.tv_text3).visibility = View.GONE
+                3 -> this.findViewById<TextView>(R.id.tv_text4).visibility = View.GONE
+                else -> throw IndexOutOfBoundsException("Argument must be from 0 to 3")
+            }
+        }
+        if (p3 >= 0) {
+            when(p3) {
+                0 -> this.findViewById<TextView>(R.id.tv_text1).visibility = View.GONE
+                1 -> this.findViewById<TextView>(R.id.tv_text2).visibility = View.GONE
+                2 -> this.findViewById<TextView>(R.id.tv_text3).visibility = View.GONE
+                3 -> this.findViewById<TextView>(R.id.tv_text4).visibility = View.GONE
+                else -> throw IndexOutOfBoundsException("Argument must be from 0 to 3")
+            }
+        }
+        if (p4 >= 0) {
+            when(p4) {
+                0 -> this.findViewById<TextView>(R.id.tv_text1).visibility = View.GONE
+                1 -> this.findViewById<TextView>(R.id.tv_text2).visibility = View.GONE
+                2 -> this.findViewById<TextView>(R.id.tv_text3).visibility = View.GONE
+                3 -> this.findViewById<TextView>(R.id.tv_text4).visibility = View.GONE
+                else -> throw IndexOutOfBoundsException("Argument must be from 0 to 3")
+            }
+        }
+    }
     /** <! Show TextViews */
     fun showFirstTextView() {
         this.findViewById<TextView>(R.id.tv_text1).visibility = View.VISIBLE
@@ -132,6 +162,81 @@ class CoolDialog(context: Context): Dialog(context) {
     }
     fun showFourthTextView() {
         this.findViewById<TextView>(R.id.tv_text4).visibility = View.VISIBLE
+    }
+    /** <! Show TextView based on position */
+    fun showTextView(p1: Int, p2: Int = -1, p3: Int = -1, p4: Int = -1) {
+        when(p1) {
+            0 -> this.findViewById<TextView>(R.id.tv_text1).visibility = View.VISIBLE
+            1 -> this.findViewById<TextView>(R.id.tv_text2).visibility = View.VISIBLE
+            2 -> this.findViewById<TextView>(R.id.tv_text3).visibility = View.VISIBLE
+            3 -> this.findViewById<TextView>(R.id.tv_text4).visibility = View.VISIBLE
+            else -> throw IndexOutOfBoundsException("Argument must be from 0 to 3")
+        }
+        if (p2 >= 0) {
+            when(p2) {
+                0 -> this.findViewById<TextView>(R.id.tv_text1).visibility = View.VISIBLE
+                1 -> this.findViewById<TextView>(R.id.tv_text2).visibility = View.VISIBLE
+                2 -> this.findViewById<TextView>(R.id.tv_text3).visibility = View.VISIBLE
+                3 -> this.findViewById<TextView>(R.id.tv_text4).visibility = View.VISIBLE
+                else -> throw IndexOutOfBoundsException("Argument must be from 0 to 3")
+            }
+        }
+        if (p3 >= 0) {
+            when(p3) {
+                0 -> this.findViewById<TextView>(R.id.tv_text1).visibility = View.VISIBLE
+                1 -> this.findViewById<TextView>(R.id.tv_text2).visibility = View.VISIBLE
+                2 -> this.findViewById<TextView>(R.id.tv_text3).visibility = View.VISIBLE
+                3 -> this.findViewById<TextView>(R.id.tv_text4).visibility = View.VISIBLE
+                else -> throw IndexOutOfBoundsException("Argument must be from 0 to 3")
+            }
+        }
+        if (p4 >= 0) {
+            when(p4) {
+                0 -> this.findViewById<TextView>(R.id.tv_text1).visibility = View.VISIBLE
+                1 -> this.findViewById<TextView>(R.id.tv_text2).visibility = View.VISIBLE
+                2 -> this.findViewById<TextView>(R.id.tv_text3).visibility = View.VISIBLE
+                3 -> this.findViewById<TextView>(R.id.tv_text4).visibility = View.VISIBLE
+                else -> throw IndexOutOfBoundsException("Argument must be from 0 to 3")
+            }
+        }
+    }
+    /** <! Set visibility on TextView based on position */
+    fun setTextViewVisibility(visibility: Int, p1: Int, p2: Int = -1, p3: Int = -1, p4: Int = -1) {
+        if (visibility != View.GONE) if (visibility != View.VISIBLE) throw UnsupportedOperationException("Requested operation is not supported")
+        when(p1) {
+            0 -> this.findViewById<TextView>(R.id.tv_text1).visibility = visibility
+            1 -> this.findViewById<TextView>(R.id.tv_text2).visibility = visibility
+            2 -> this.findViewById<TextView>(R.id.tv_text3).visibility = visibility
+            3 -> this.findViewById<TextView>(R.id.tv_text4).visibility = visibility
+            else -> throw IllegalArgumentException("Argument must be from 0 to 3")
+        }
+        if(p2 >= 0) {
+            when(p2) {
+                0 -> this.findViewById<TextView>(R.id.tv_text1).visibility = visibility
+                1 -> this.findViewById<TextView>(R.id.tv_text2).visibility = visibility
+                2 -> this.findViewById<TextView>(R.id.tv_text3).visibility = visibility
+                3 -> this.findViewById<TextView>(R.id.tv_text4).visibility = visibility
+                else -> throw IllegalArgumentException("Argument must be from 0 to 3")
+            }
+        }
+        if(p3 >= 0) {
+            when(p3) {
+                0 -> this.findViewById<TextView>(R.id.tv_text1).visibility = visibility
+                1 -> this.findViewById<TextView>(R.id.tv_text2).visibility = visibility
+                2 -> this.findViewById<TextView>(R.id.tv_text3).visibility = visibility
+                3 -> this.findViewById<TextView>(R.id.tv_text4).visibility = visibility
+                else -> throw IllegalArgumentException("Argument must be from 0 to 3")
+            }
+        }
+        if(p4 >= 0) {
+            when(p4) {
+                0 -> this.findViewById<TextView>(R.id.tv_text1).visibility = visibility
+                1 -> this.findViewById<TextView>(R.id.tv_text2).visibility = visibility
+                2 -> this.findViewById<TextView>(R.id.tv_text3).visibility = visibility
+                3 -> this.findViewById<TextView>(R.id.tv_text4).visibility = visibility
+                else -> throw IllegalArgumentException("Argument must be from 0 to 3")
+            }
+        }
     }
     /** <! Change text color on all dialog TextViews */
     fun setDialogTextColor(hexCode: String) {
@@ -236,6 +341,28 @@ class CoolDialog(context: Context): Dialog(context) {
     /**********************************
     *** CIRCLE IMAGE VIEW FUNCTIONS ***
     **********************************/
+
+    /** <! Set image by drawable ID */
+    fun setImageResource(id: Int) {
+        try {
+            this.findViewById<ImageView>(R.id.iv_circle_image).setImageResource(id)
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
+    }
+    /** <! Set image by URL using Glide library (NEEDS INTERNET CONNECTION!) */
+    fun setImageResource(url: String) {
+        try {
+            val circleImageView: CircleImageView = this.findViewById(R.id.iv_circle_image)
+            Glide.with(context)
+                .load(
+                    url
+                )
+                .into(this.findViewById(R.id.iv_circle_image))
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
+    }
 
     /** <! Set Image size on dialog */
     @SuppressLint("CutPasteId")
