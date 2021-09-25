@@ -9,6 +9,7 @@ import android.view.Window
 import android.widget.AbsListView
 import android.widget.TextView
 import android.widget.Toast
+import androidx.core.content.ContextCompat
 import com.google.android.material.button.MaterialButton
 
 class MainActivity : AppCompatActivity() {
@@ -28,8 +29,8 @@ class MainActivity : AppCompatActivity() {
             dialog.setCancelButtonOnClickListener(View.OnClickListener { dialog.dismiss() })
             dialog.setCallButtonOnClickListener(View.OnClickListener { Toast.makeText(baseContext, "CALL BUTTON CLICKED", Toast.LENGTH_LONG).show() })
             dialog.setTextToAll("Annie Fox", "annie.fox@droidev.com", "812-913-7452", "New Jersey, NY, USA")
-            dialog.setImageResource("https://torange.biz/photofxnew/76/HD/lion-profile-picture-76801.jpg")
-            dialog.setImageSize(170)
+            dialog.setImageResource(R.drawable.profile_picture)
+            dialog.setImageSize(150)
 
             val textView: TextView = dialog.getFirstTextView()
             textView.textSize = 20f
