@@ -1,4 +1,4 @@
-# CoolDialog: v1.0.7-a1
+# CoolDialog: v1.0.8-a1
 ## _Make your android applications better!_
 
 [![](https://jitpack.io/v/EdinHas26/CoolDialog.svg)](https://jitpack.io/#EdinHas26/CoolDialog)
@@ -38,7 +38,7 @@ allprojects {
 }
 
 dependencies {
-    implementation 'com.github.EdinHas26:CoolDialog:v1.0.7-a1'
+    implementation 'com.github.EdinHas26:CoolDialog:v1.0.8-a1'
 }
 ```
 #### ii. Set up Material Theme
@@ -154,7 +154,7 @@ Again you can send more than one position at time but there must be minimum of o
 If you want to change the color of the text you can do it like this:
 ```kotlin
 coolDialog.setDialogTextColor("#000000")
-coolDialog.setDialogTextColor(ContextCompat.getColor(this.baseContext, R.color.colorPrimary))
+coolDialog.setDialogTextColor(R.color.colorPrimary)
 ```
 Text color can be changed by sending hex color code as String or sending color id.
 
@@ -179,16 +179,16 @@ coolDialog.showCancelButton()
 coolDialog.hideCancelButton()
 ```
 
-###### c. Change button text color
+###### c. Change button and button text color
 To change the text color of the call button just use this:
 ```kotlin
-coolDialog.setCallButtonTextColor("#000000")
-coolDialog.setCallButtonTextColor(ContextCompat.getColor(this.baseContext, R.color.colorPrimary))
+coolDialog.setCallButtonTextColor(R.color.colorPrimary)
+coolDialog.setCallButtonColor(R.color.colorAccent) // or you can use hex color codes like this .setCallButtonColor("#000000") 
 ```
 or for CancelButton:
 ```kotlin
-coolDialog.setCancelButtonTextColor("#000000")
-coolDialog.setCancelButtonTextColor(ContextCompat.getColor(this.baseContext, R.color.colorPrimary))
+coolDialog.setCancelButtonTextColor(R.color.colorPrimary)
+coolDialog.setCancelButtonColor(R.color.colorAccent) // or you can use hex color codes like this .setCallButtonColor("#000000") 
 ```
 Button text color can be changed by sending hex color code as String or sending color id.
 
@@ -198,10 +198,9 @@ Call button has icon which can be changed. You can simply use these methods to c
 coolDialog.setCallButtonIconResource(drawable: Drawable)
 coolDialog.setCallButtonIconResource(resourceID: Int)
 ```
-As you can see there are two ways to change the icon resource. One is to send drawable and the other one is to send drawable id. In order to change its color you can do it with one of the next methods:
+As you can see there are two ways to change the icon resource. One is to send drawable and the other one is to send drawable id. In order to change its color you can do it like this:
 ```kotlin
-coolDialog.setCallButtonIconColor("#000000")
-coolDialog.setCallButtonIconColor(ContextCompat.getColor(this.baseContext, R.color.colorPrimary))
+coolDialog.setCallButtonIconColor(R.color.colorPrimary)
 ```
 
 ###### e. Set onClickListener on buttons
@@ -240,7 +239,7 @@ coolDialog.setImageStrokeColor("#000000")
 ```
 or like this:
 ```kotlin
-coolDialog.setImageStrokeColor(ContextCompat.getColor(this.baseContext, R.color.colorPrimary))
+coolDialog.setImageStrokeColor(R.color.colorPrimary)
 ```
 
 ### v. Dialog background
@@ -250,7 +249,7 @@ coolDialog.setDialogBackground("#000000")
 ```
 or like this:
 ```kotlin
-coolDialog.setDialogBackground(ContextCompat.getColor(this.baseContext, R.color.colorPrimary))
+coolDialog.setDialogBackground(R.color.colorPrimary)
 ```
 
 # Credits
