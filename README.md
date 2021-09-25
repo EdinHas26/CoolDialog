@@ -102,7 +102,7 @@ In order to let you customize the layout to your needs there is option to get la
 - `.getCancelButtonView()` - retrieves MaterialButton
 
 #### ii. TextView 
-CoolDialog has four TextView's create inside LinearLayout with `vertical` orientation, one below each other. 
+CoolDialog has four TextView's created inside LinearLayout with `vertical` orientation, one below each other. 
 ###### a. Set text on TextViews
 In order to change text there are simple methods which can be used:
 
