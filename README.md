@@ -27,7 +27,7 @@ Implementation of CoolDialog is really easy. Just like any other dialog with few
 ### Prerequisite
 #### i. Gradle
 
-In `Build.Gradle` of app module, include these dependencies. This library is available on `[maven { url 'https://jitpack.io' }]`(https://jitpack.io/#EdinHas26/CoolDialog)
+In `Build.Gradle` of app module, include these dependencies. 
 
 ```groovy
 allprojects {
@@ -41,6 +41,7 @@ dependencies {
     implementation 'com.github.EdinHas26:CoolDialog:v1.0.9-a1'
 }
 ```
+This library is available on [maven { url 'https://jitpack.io' }](https://jitpack.io/#EdinHas26/CoolDialog)
 #### ii. Set up Material Theme
 In order for CoolDialog to work setting Material Theme to app is necessary. To set this up update [`themes.xml`](app\src\main\res\values\themes.xml) of `values` directory in app.
 ```xml
