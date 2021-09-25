@@ -1,4 +1,4 @@
-# CoolDialog: v1.0.5-a1
+# CoolDialog: v1.0.7-a1
 ## _Make your android applications better!_
 
 [![](https://jitpack.io/v/EdinHas26/CoolDialog.svg)](https://jitpack.io/#EdinHas26/CoolDialog)
@@ -38,7 +38,7 @@ allprojects {
 }
 
 dependencies {
-    implementation 'com.github.EdinHas26:CoolDialog:latest_version'
+    implementation 'com.github.EdinHas26:CoolDialog:v1.0.7-a1'
 }
 ```
 #### ii. Set up Material Theme
@@ -51,7 +51,7 @@ In order for CoolDialog to work setting Material Theme to app is necessary. To s
     </style>
 </resources>
 ```
-These are required prerequisites to implement CoolDialog library. Just change "latest_version" with current library release (Example: v1.0.4-a1)
+These are required prerequisites to implement CoolDialog library.
 
 #### iii. Create Dialog Instance
 
