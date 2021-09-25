@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.app.Dialog
 import android.content.Context
 import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.graphics.drawable.Drawable
 import android.view.View
 import android.view.ViewGroup
@@ -50,6 +51,7 @@ class CoolDialog(context: Context): Dialog(context) {
     /** <! Request content view so there is no need to call .setContentView() */
     fun requestContentView() {
         setContentView(R.layout.dialog_layout)
+        this.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
     }
     /** <! Get root layout of dialog_layout.xml */
     fun getRootLayout(): RelativeLayout {

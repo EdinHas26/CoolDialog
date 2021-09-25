@@ -19,20 +19,21 @@ class MainActivity : AppCompatActivity() {
 
         val button: MaterialButton = findViewById<MaterialButton>(R.id.btn_open_dialog)
         button.setOnClickListener{
-            val dialog: CoolDialog = CoolDialog(this)
-            dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
-            dialog.requestContentView()
-            val dialog_window = dialog.window
-            dialog_window?.setLayout(AbsListView.LayoutParams.MATCH_PARENT, AbsListView.LayoutParams.WRAP_CONTENT)
-            dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
-            dialog.setCanceledOnTouchOutside(false);
-            dialog.setCancelButtonOnClickListener(View.OnClickListener { dialog.dismiss() })
-            dialog.setCallButtonOnClickListener(View.OnClickListener { Toast.makeText(baseContext, "CALL BUTTON CLICKED", Toast.LENGTH_LONG).show() })
-            dialog.setTextToAll("Annie Fox", "annie.fox@droidev.com", "812-913-7452", "New Jersey, NY, USA")
-            dialog.setImageResource(R.drawable.profile_picture)
-            dialog.setImageSize(150)
+            val coolDialog = CoolDialog(this)
+            coolDialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
+            coolDialog.requestContentView()
+            coolDialog.setCanceledOnTouchOutside(false)
+            val dialogWindow = coolDialog.window
+            dialogWindow?.setLayout(AbsListView.LayoutParams.MATCH_PARENT, AbsListView.LayoutParams.WRAP_CONTENT)
 
-            dialog.show()
+            coolDialog.setTextToAll("Edin Hasanović", "edin.hasanovic@sourecode.ba", "+38762484877", "Slavinovići bb")
+            coolDialog.setImageSize(150)
+            coolDialog.setImageResource(R.drawable.profile_picture)
+            coolDialog.setCallButtonIconResource(R.drawable.ic_baseline)
+            coolDialog.setCallButtonIconColor(R.color.purple_200)
+            coolDialog.setCallButtonText("View profile")
+
+            coolDialog.show()
         }
     }
 }

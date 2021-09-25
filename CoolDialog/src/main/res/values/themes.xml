@@ -4,10 +4,11 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorSecondary">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
-        <item name="selectableItemBackground">@color/colorPrimary</item>
+        <item name="colorPrimary">@color/dialogPrimary</item>
+        <item name="colorSecondary">@color/dialogPrimaryDark</item>
+        <item name="colorAccent">@color/dialogAccent</item>
+        <item name="selectableItemBackground">@color/dialogPrimary</item>
+        <item name="backgroundColor">@android:color/transparent</item>
         <item name="android:windowDisablePreview">true</item>
         <item name="android:windowTranslucentNavigation">false</item>
         <item name="android:navigationBarColor">@android:color/transparent</item>
