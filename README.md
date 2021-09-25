@@ -27,7 +27,7 @@ Implementation of CoolDialog is really easy. Just like any other dialog with few
 ### Prerequisite
 #### i. Gradle
 
-In `Build.Gradle` of app module, include these dependencies. This library is available on `[maven { url 'https://jitpack.io' }](https://jitpack.io/#EdinHas26/CoolDialog)`
+In `Build.Gradle` of app module, include these dependencies. This library is available on `[maven { url 'https://jitpack.io' }]`(https://jitpack.io/#EdinHas26/CoolDialog)
 
 ```groovy
 allprojects {
