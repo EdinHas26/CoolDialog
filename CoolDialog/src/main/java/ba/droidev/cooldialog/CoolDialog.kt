@@ -82,16 +82,16 @@ class CoolDialog(context: Context): Dialog(context) {
 
     /** <! Set text on TextViews */
     fun setTextOnFirstTextView(text: String) {
-        this.findViewById<TextView>(R.id.tv_text1).setText(text)
+        this.findViewById<TextView>(R.id.tv_text1).text = text
     }
     fun setTextOnSecondTextView(text: String) {
-        this.findViewById<TextView>(R.id.tv_text2).setText(text)
+        this.findViewById<TextView>(R.id.tv_text2).text = text
     }
     fun setTextOnThirdTextView(text: String) {
-        this.findViewById<TextView>(R.id.tv_text3).setText(text)
+        this.findViewById<TextView>(R.id.tv_text3).text = text
     }
     fun setTextOnFourthTextView(text: String) {
-        this.findViewById<TextView>(R.id.tv_text4).setText(text)
+        this.findViewById<TextView>(R.id.tv_text4).text = text
     }
     fun setTextToAll(text: String, text2: String, text3: String, text4: String) {
 
@@ -246,10 +246,10 @@ class CoolDialog(context: Context): Dialog(context) {
         this.findViewById<TextView>(R.id.tv_text4).setTextColor(Color.parseColor(hexCode))
     }
     fun setDialogTextColor(colorCode: Int) {
-        this.findViewById<TextView>(R.id.tv_text1).setTextColor(colorCode)
-        this.findViewById<TextView>(R.id.tv_text2).setTextColor(colorCode)
-        this.findViewById<TextView>(R.id.tv_text3).setTextColor(colorCode)
-        this.findViewById<TextView>(R.id.tv_text4).setTextColor(colorCode)
+        this.findViewById<TextView>(R.id.tv_text1).setTextColor(ContextCompat.getColor(this.context, colorCode))
+        this.findViewById<TextView>(R.id.tv_text2).setTextColor(ContextCompat.getColor(this.context, colorCode))
+        this.findViewById<TextView>(R.id.tv_text3).setTextColor(ContextCompat.getColor(this.context, colorCode))
+        this.findViewById<TextView>(R.id.tv_text4).setTextColor(ContextCompat.getColor(this.context, colorCode))
     }
 
     /***********************
@@ -258,21 +258,18 @@ class CoolDialog(context: Context): Dialog(context) {
 
     /** <! Set call button text */
     fun setCallButtonText(text: String) {
-        this.findViewById<MaterialButton>(R.id.btn_call).setText(text)
+        this.findViewById<MaterialButton>(R.id.btn_call).text = text
     }
     /** <! Set call button text color */
-    fun setCallButtonTextColor(hexCode: String) {
-        this.findViewById<MaterialButton>(R.id.btn_call).setTextColor(Color.parseColor(hexCode))
-    } /** Using hex code to set color */
     fun setCallButtonTextColor(colorCode: Int) {
-        this.findViewById<MaterialButton>(R.id.btn_call).setTextColor(colorCode)
-    } /** Using ContextCompat.getColor() to set color */
+        this.findViewById<MaterialButton>(R.id.btn_call).setTextColor(ContextCompat.getColor(this.context, colorCode))
+    }
     /** <! Set call button background color */
     fun setCallButtonColor(hexCode: String) {
         this.findViewById<MaterialButton>(R.id.btn_call).setBackgroundColor(Color.parseColor(hexCode))
     } /** Using hex code to set color */
     fun setCallButtonColor(colorCode: Int) {
-        this.findViewById<MaterialButton>(R.id.btn_call).setBackgroundColor(colorCode)
+        this.findViewById<MaterialButton>(R.id.btn_call).setBackgroundColor(ContextCompat.getColor(this.context, colorCode))
     } /** Using ContextCompat.getColor() to set color */
     /** <! Set call button onClickListener() */
     fun setCallButtonOnClickListener(listener: View.OnClickListener) {
@@ -297,30 +294,24 @@ class CoolDialog(context: Context): Dialog(context) {
         this.findViewById<MaterialButton>(R.id.btn_call).icon = drawable
     }
     /** <! Set call button icon resource color */
-    fun setCallButtonIconColor(hexCode: String) {
-        this.findViewById<MaterialButton>(R.id.btn_call).icon.setTint(Color.parseColor(hexCode))
-    }
     fun setCallButtonIconColor(colorCode: Int) {
-        this.findViewById<MaterialButton>(R.id.btn_call).icon.setTint(colorCode)
+        this.findViewById<MaterialButton>(R.id.btn_call).iconTint = ContextCompat.getColorStateList(this.context, colorCode)
     }
 
     /** <! Set cancel button text */
     fun setCancelButtonText(text: String) {
-        this.findViewById<MaterialButton>(R.id.btn_cancel).setText(text)
+        this.findViewById<MaterialButton>(R.id.btn_cancel).text = text
     }
     /** <! Set cancel button text color */
-    fun setCancelButtonTextColor(hexCode: String) {
-        this.findViewById<MaterialButton>(R.id.btn_cancel).setTextColor(Color.parseColor(hexCode))
-    } /** Using hex code to set color */
     fun setCancelButtonTextColor(colorCode: Int) {
-        this.findViewById<MaterialButton>(R.id.btn_cancel).setTextColor(colorCode)
-    } /** Using ContextCompat.getColor() to set color */
+        this.findViewById<MaterialButton>(R.id.btn_cancel).setTextColor(ContextCompat.getColor(this.context, colorCode))
+    }
     /** <! Set cancel button background color */
     fun setCancelButtonColor(hexCode: String) {
         this.findViewById<MaterialButton>(R.id.btn_cancel).setBackgroundColor(Color.parseColor(hexCode))
     } /** Using hex code to set color */
     fun setCancelButtonColor(colorCode: Int) {
-        this.findViewById<MaterialButton>(R.id.btn_cancel).setBackgroundColor(colorCode)
+        this.findViewById<MaterialButton>(R.id.btn_cancel).setBackgroundColor(ContextCompat.getColor(this.context, colorCode))
     } /** Using ContextCompat.getColor() to set color */
     /** <! Set cancel button OnClickListener() */
     fun setCancelButtonOnClickListener(listener: View.OnClickListener) {
@@ -383,7 +374,7 @@ class CoolDialog(context: Context): Dialog(context) {
         this.findViewById<RelativeLayout>(R.id.rl_image_root).background.setTint(Color.parseColor(hexCode))
     } /** Using hex code to set color */
     fun setImageStrokeColor(colorCode: Int) {
-        this.findViewById<RelativeLayout>(R.id.rl_image_root).background.setTint(colorCode)
+        this.findViewById<RelativeLayout>(R.id.rl_image_root).background.setTint(ContextCompat.getColor(this.context, colorCode))
     } /** Using ContextCompat.getColor() to set color */
 
     /************************
@@ -395,7 +386,7 @@ class CoolDialog(context: Context): Dialog(context) {
         this.findViewById<CardView>(R.id.cv_main_cardview).setCardBackgroundColor(Color.parseColor(hexCode))
     } /** Using hex code to set color */
     fun setDialogBackground(colorCode: Int) {
-        this.findViewById<CardView>(R.id.cv_main_cardview).setCardBackgroundColor(colorCode)
+        this.findViewById<CardView>(R.id.cv_main_cardview).setCardBackgroundColor(ContextCompat.getColor(this.context, colorCode))
     } /** Using ContextCompat.getColor() to set color */
 
 

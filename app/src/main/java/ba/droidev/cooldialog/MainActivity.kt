@@ -31,10 +31,6 @@ class MainActivity : AppCompatActivity() {
             dialog.setTextToAll("Annie Fox", "annie.fox@droidev.com", "812-913-7452", "New Jersey, NY, USA")
             dialog.setImageResource(R.drawable.profile_picture)
             dialog.setImageSize(150)
-            dialog.setDialogTextColor(ContextCompat.getColor(this.baseContext, R.color.colorAccent))
-
-            val textView: TextView = dialog.getFirstTextView()
-            textView.textSize = 20f
 
             dialog.show()
         }
