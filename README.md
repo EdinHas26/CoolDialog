@@ -103,7 +103,7 @@ In order to let you customize the layout to your needs there is option to get la
 
 #### ii. TextView 
 CoolDialog has four TextView's created inside LinearLayout with `vertical` orientation, one below each other. 
-###### a. Set text on TextViews
+##### a. Set text on TextViews
 In order to change text there are simple methods which can be used:
 
 - `.setTextOnFirstTextView(text: String)`
